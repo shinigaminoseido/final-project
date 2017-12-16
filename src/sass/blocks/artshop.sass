@@ -1,0 +1,18 @@
+.artshop
+  grid-area: artshop
+  background-color: black
+  color: white
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: [space] 100px [space] auto [space] 100px [space] auto [space] 100px [space] auto [space] 100px [space]
+  grid-template-areas: "tilt" "heading" "." "slider" "." "link" "."
+.artshop__heading
+  grid-area: heading
+  text-align: center
+  +font-big
+.artshop__slider
+  grid-area: slider
+.artshop__link
+  grid-area: link
+  text-align: center
+  +font-small

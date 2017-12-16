@@ -1,0 +1,23 @@
+.slider
+
+.slider__list
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  grid-template-rows: auto
+  grid-template-areas: ". item-1 item-2 item-3 item-4 ."
+.slider__item
+  grid-area: item-1
+  &:nth-child(1)
+    grid-area: item-2
+  &:nth-child(2)
+    grid-area: item-3
+  &:nth-child(3)
+    grid-area: item-4
+
+.slider__link
+
+.slider__image
+
+.slider__heading
+
+.slider__price

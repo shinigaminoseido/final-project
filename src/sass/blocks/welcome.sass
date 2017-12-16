@@ -1,0 +1,17 @@
+.welcome
+  grid-area: welcome
+  display: grid
+  grid-template-columns: 1fr [space] 50px [space] 1fr
+  grid-template-rows: auto
+  grid-template-areas: "description . img"
+.welcome__description
+  grid-area: description
+  align-self: center
+.welcome__heading
+  +font-big
+.welcome__text
+  +font-small
+.welcome__image
+  grid-area: img
+  width: 100%
+  height: auto

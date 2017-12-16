@@ -1,0 +1,48 @@
+=desktop-large
+  @media screen and ($desktop-large)
+    @content
+
+=desktop
+  @media screen and ($desktop)
+    @content
+
+=tablet
+  @media screen and ($tablet)
+    @content
+
+=clearfix
+  &:before,
+  &:after,
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+=font-big
+  font-size: $FS-big
+  line-height: $LH-big
+
+=font-med
+  font-size: $FS-med
+  line-height: $LH-med
+
+=font-small
+  font-size: $FS-small
+  line-height: $LH-small
+
+=font-smallest
+  font-size: $FS-smallest
+  line-height: $LH-smallest
+
+@mixin center($horizontal: true, $vertical: true)
+  position: absolute
+  @if ($horizontal and $vertical)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  @else if ($horizontal)
+    left: 50%
+    transform: translate(-50%, 0)
+  @else if ($vertical)
+    top: 50%
+    transform: translate(0, -50%)

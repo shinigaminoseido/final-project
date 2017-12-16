@@ -1,0 +1,8 @@
+.main
+  grid-area: main
+  display: grid
+  // adding 1fr to the side because if added in the .grid we wont be able to make a full page tilt
+  // this way we can control which section of the main we make full width(the artshop)
+  grid-template-columns: 1fr 8fr 1fr
+  grid-template-rows: auto [space] 200px [space] auto [space] 200px [space] auto
+  grid-template-areas: ". welcome ." ". . ." ". intro ." ". . ." " artshop artshop artshop"

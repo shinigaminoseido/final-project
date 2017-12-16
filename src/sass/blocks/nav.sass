@@ -1,0 +1,25 @@
+.nav
+  height: 60px
+  border-top: 1px solid black
+  border-bottom: 1px solid black
+
+.nav__list
+  display: flex
+  justify-content: space-around
+  align-items: center
+.nav__item
+  display: flex
+  height: 60px
+  &--active
+    display: flex
+    height: 60px
+    background-color: black
+    color: pink
+.nav__link
+  padding: 15px
+  height: 60px
+  cursor: pointer
+  +font-small
+  &:hover
+    background-color: black
+    color: pink

@@ -1,0 +1,27 @@
+.intro
+  grid-area: intro
+  display: grid
+  grid-template-columns: 1fr 50px 1fr
+  grid-template-rows: auto [space] 100px [space] 500px
+  grid-template-areas: "heading heading heading" ". . ." "description . vid"
+.intro__heading
+  grid-area: heading
+  +font-big
+  text-align: center
+.intro__text
+  grid-area: description
+  align-self: center
+  +font-small
+.intro__video-container
+  grid-area: vid
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 35px
+  height: 0
+  overflow: hidden
+.intro__video
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%

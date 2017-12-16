@@ -1,0 +1,53 @@
+html
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body
+  background: $primaryBack
+  color: $primaryColor
+
+a
+  color: inherit
+  text-decoration: none
+
+img,
+  max-width: 100%
+  height: auto
+
+sup,
+sub
+  position: relative
+  vertical-align: baseline
+
+// this will be the class used to hide screen reader content
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+// creating the overal grid of the page
+// [space] is being used for TRUE WHITESPACE!
+.grid
+  display: grid
+  grid-template-columns: 1fr 8fr 1fr
+  grid-template-rows: 160px [space] 50px [space] auto auto
+  grid-template-areas: ". header ." ". . ." "main main main" ". . ." "footer footer footer"
+//instead of making 2 tilts we will place 1 on top of artshop and 1 on top of footer
+//that way we can reuse this with no adjustment
+.tilt
+  display: block
+  grid-area: tilt
+  position: relative
+  top: -50px
+  height: 100px
+  width: 100%
+  transform: skewy(-2deg)
+  background: $black
