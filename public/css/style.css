@@ -105,13 +105,13 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
-  grid-template-rows: auto  50px  auto;
+  grid-template-rows: auto 50px auto;
   grid-template-areas: ". header ." ". . ." "main main main" ". . ." "footer footer footer"; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     .grid {
       grid-template-columns: auto;
-      grid-template-rows: auto  50px  auto;
-      grid-template-areas: "header" "." "main" "." "footer"; } }
+      grid-template-rows: auto 30px auto;
+      grid-template-areas: "header" "." "main" "footer"; } }
 
 .tilt {
   display: block;
@@ -191,6 +191,10 @@ h2 {
   .nav__link:hover {
     background-color: #000000;
     color: #c98ed1; }
+  @media screen and (max-width: 1024px) {
+    .nav__link {
+      font-size: 18px;
+      line-height: 20px; } }
 
 .main-page {
   grid-area: main;
@@ -198,6 +202,11 @@ h2 {
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: auto  200px  auto  200px  auto;
   grid-template-areas: ". welcome ." ". . ." ". intro ." ". . ." " artshop artshop artshop"; }
+  @media screen and (max-width: 1024px) {
+    .main-page {
+      grid-template-columns: 1fr 8fr 1fr;
+      grid-template-rows: auto  100px  auto  100px  auto;
+      grid-template-areas: ". welcome ." ". . ." ". intro ." ". . ." " artshop artshop artshop"; } }
 
 .welcome {
   grid-area: welcome;
@@ -205,6 +214,11 @@ h2 {
   grid-template-columns: 1fr  50px  1fr;
   grid-template-rows: auto;
   grid-template-areas: "description . img"; }
+  @media screen and (max-width: 1024px) {
+    .welcome {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "img" "description" "."; } }
 
 .welcome__description {
   grid-area: description;
@@ -215,12 +229,20 @@ h2 {
   font-size: 58px;
   line-height: 60px;
   margin: 10px 0; }
+  @media screen and (max-width: 1024px) {
+    .welcome__heading {
+      font-size: 48px;
+      line-height: 50px; } }
 
 .welcome__artists {
   font-size: 24px;
   line-height: 25px;
   text-transform: uppercase;
   margin: 10px 0; }
+  @media screen and (max-width: 1024px) {
+    .welcome__artists {
+      font-size: 18px;
+      line-height: 20px; } }
 
 .welcome__date {
   font-weight: 700;
@@ -234,7 +256,9 @@ h2 {
 .welcome__image {
   grid-area: img;
   width: 100%;
-  height: auto; }
+  height: auto;
+  -ms-flex-item-align: center;
+  align-self: center; }
 
 .intro {
   grid-area: intro;
@@ -242,12 +266,21 @@ h2 {
   grid-template-columns: 1fr 50px 1fr;
   grid-template-rows: auto  100px  auto;
   grid-template-areas: "heading heading heading" ". . ." "vid . text"; }
+  @media screen and (max-width: 1024px) {
+    .intro {
+      grid-template-columns: auto;
+      grid-template-rows: auto  30px  auto 30px auto;
+      grid-template-areas: "heading" "." "vid" "." "text"; } }
 
 .intro__heading {
   grid-area: heading;
   font-size: 58px;
   line-height: 60px;
   text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .intro__heading {
+      font-size: 48px;
+      line-height: 50px; } }
 
 .intro__text {
   grid-area: text;
@@ -264,12 +297,19 @@ h2 {
   grid-template-columns: auto;
   grid-template-rows: 100px  auto  100px  auto  100px  auto  100px;
   grid-template-areas: "tilt" "heading" "." "slider" "." "link" "."; }
+  @media screen and (max-width: 1024px) {
+    .artshop {
+      grid-template-rows: 50px  auto  50px  auto  50px  auto  50px; } }
 
 .artshop__heading {
   grid-area: heading;
   text-align: center;
   font-size: 58px;
   line-height: 60px; }
+  @media screen and (max-width: 1024px) {
+    .artshop__heading {
+      font-size: 48px;
+      line-height: 50px; } }
 
 .artshop__slider {
   grid-area: slider; }
@@ -280,20 +320,11 @@ h2 {
   font-size: 24px;
   line-height: 25px; }
 
-.slider__list {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: ". item-1 item-2 item-3 item-4 ."; }
-
-.slider__item {
-  grid-area: item-1; }
-  .slider__item:nth-child(1) {
-    grid-area: item-2; }
-  .slider__item:nth-child(2) {
-    grid-area: item-3; }
-  .slider__item:nth-child(3) {
-    grid-area: item-4; }
+.carousel-cell {
+  width: 20%; }
+  @media screen and (max-width: 1024px) {
+    .carousel-cell {
+      width: 30%; } }
 
 .footer {
   grid-area: footer;
@@ -344,6 +375,11 @@ h2 {
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: auto  200px  auto;
   grid-template-areas: ". about ." ". . ." "staff staff staff"; }
+  @media screen and (max-width: 1024px) {
+    .about-page {
+      grid-template-columns: auto;
+      grid-template-rows: auto  100px  auto;
+      grid-template-areas: "about" "." "staff"; } }
 
 .about {
   grid-area: about;
@@ -351,12 +387,20 @@ h2 {
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: auto 50px auto 50px auto;
   grid-template-areas: ". heading ." ". . ." ". vid ." ". . ." "text text text"; }
+  @media screen and (max-width: 1024px) {
+    .about {
+      grid-template-rows: auto 30px auto 30px auto;
+      grid-template-areas: ". heading ." ". . ." "vid vid vid" ". . ." ". text ."; } }
 
 .about__heading {
   grid-area: heading;
   font-size: 58px;
   line-height: 60px;
   text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .about__heading {
+      font-size: 48px;
+      line-height: 50px; } }
 
 .about__text {
   grid-area: text;
@@ -368,15 +412,35 @@ h2 {
   background-color: #000000;
   padding: 0 0 100px 0; }
 
+.staff__heading {
+  grid-area: heading;
+  color: whitesmoke;
+  font-size: 58px;
+  line-height: 60px;
+  text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .staff__heading {
+      font-size: 48px;
+      line-height: 50px; } }
+
 .staff__member {
   display: grid;
   grid-template-columns: 1fr 100px 1.1fr 2fr 1.1fr 100px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: ". . img text text line-right ."; }
+  grid-template-rows: auto 50px auto;
+  grid-template-areas: ". . . heading . . ." ". . . . . . ." ". . img text text line-right ."; }
   .staff__member:nth-of-type(2n) {
     grid-template-areas: ". line-left text text img . ."; }
     .staff__member:nth-of-type(2n) .staff__text {
       padding: 0 0 0 20%; }
+  @media screen and (max-width: 1024px) {
+    .staff__member {
+      grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: ". . heading . ." ". . . . ." ". img text text line-right"; }
+      .staff__member:nth-of-type(2n) {
+        grid-template-areas: "line-left text text img ."; }
+        .staff__member:nth-of-type(2n) .staff__text {
+          padding: 0 0 0 20%; } }
 
 .staff__img {
   grid-area: img;
@@ -403,6 +467,10 @@ h2 {
   border-bottom: 5px solid #84cfa1;
   -ms-flex-item-align: end;
   align-self: flex-end; }
+  @media screen and (max-width: 1024px) {
+    .staff__lines--right,
+    .staff__lines--left {
+      display: none; } }
 
 .staff__lines--left {
   grid-area: line-left;

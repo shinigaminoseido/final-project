@@ -6,13 +6,26 @@
   grid-template-columns: auto
   grid-template-rows:  100px  auto  100px  auto  100px  auto  100px
   grid-template-areas: "tilt" "heading" "." "slider" "." "link" "."
+  +desktop
+    grid-template-rows:  50px  auto  50px  auto  50px  auto  50px
+
+
 .artshop__heading
   grid-area: heading
   text-align: center
   +font-big
+  +desktop
+    +font-med
+
 .artshop__slider
   grid-area: slider
+
 .artshop__link
   grid-area: link
   text-align: center
   +font-small
+
+.carousel-cell
+  width: 20%
+  +desktop
+    width: 30%

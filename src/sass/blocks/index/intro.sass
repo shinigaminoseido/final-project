@@ -4,13 +4,24 @@
   grid-template-columns: 1fr 50px 1fr
   grid-template-rows: auto  100px  auto
   grid-template-areas: "heading heading heading" ". . ." "vid . text"
+
+  +desktop
+    grid-template-columns: auto
+    grid-template-rows: auto  30px  auto 30px auto
+    grid-template-areas: "heading" "." "vid" "." "text"
+
 .intro__heading
   grid-area: heading
   +font-big
   text-align: center
+
+  +desktop
+    +font-med
+
 .intro__text
   grid-area: text
   align-self: center
   +font-small
+
 .intro__video
   //in scaffolding because of repeated properties

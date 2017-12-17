@@ -4,26 +4,40 @@
   padding: 0 0 100px 0
 
 .staff__heading
+  grid-area: heading
+  color: $white-dark
+  +font-big
+  text-align: center
+  +desktop
+    +font-med
 
 .staff__members
 
 .staff__member
   display: grid
   grid-template-columns: 1fr 100px 1.1fr 2fr 1.1fr 100px 1fr
-  grid-template-rows: auto
-  grid-template-areas: ". . img text text line-right ."
+  grid-template-rows: auto 50px auto
+  grid-template-areas: ". . . heading . . ." ". . . . . . ." ". . img text text line-right ."
   &:nth-of-type(2n)
     grid-template-areas: ". line-left text text img . ."
     .staff__text
       padding: 0 0 0 20%
+  +desktop
+    grid-template-columns: 1fr 2fr 4fr 2fr 1fr
+    grid-template-rows: auto
+    grid-template-areas: ". . heading . ." ". . . . ." ". img text text line-right"
+    &:nth-of-type(2n)
+      grid-template-areas: "line-left text text img ."
+      .staff__text
+        padding: 0 0 0 20%
 
 .staff__img
   grid-area: img
   height: 300px
   padding: 10px
   background-color: $black
-
   z-index: 1
+
 .staff__text
   grid-area: text
   color: $white-dark
@@ -39,6 +53,8 @@
   border-top: 5px solid $green
   border-bottom: 5px solid $green
   align-self: flex-end
+  +desktop
+    display: none
 
 
 .staff__lines--left
