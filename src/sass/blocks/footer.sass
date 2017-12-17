@@ -4,6 +4,9 @@
   grid-template-columns: 1fr 3fr  50px  2fr  50px  3fr 1fr
   grid-template-rows:  100px  auto  50px  auto
   grid-template-areas: "tilt tilt tilt tilt tilt tilt tilt" ". nav nav nav nav nav ." ". . . . . . ." ". opening . some . address ."
+  +mobile
+    grid-template-columns: 10px 2fr 10px 2fr 10px
+    grid-template-areas: "tilt tilt tilt tilt tilt" ". nav nav nav ." ". . . . ." ". opening . address ." " . some some some ."
 
 .footer__nav-section
   grid-area: nav
@@ -17,8 +20,23 @@
 
 .footer__opening
   grid-area: opening
+
 .footer__some
   grid-area: some
+  .fa
+    color: $black
+    background-color: $white-dark
+    border-radius: 100px
+    &:hover
+      color: $green
+      background-color: $black
+  .footer__list
+    display: flex
+  .footer__heading
+    padding: 0 0 40px 0
+    +mobile
+      display: none
+
 .footer__address
   grid-area: address
 .footer__opening,
@@ -34,4 +52,5 @@
 
 .footer__item
   +font-smallest
-  line-height: 40px
+  line-height: 35px
+  padding: 0 10px 0 10px

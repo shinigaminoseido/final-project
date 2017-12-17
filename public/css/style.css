@@ -204,9 +204,11 @@ h2 {
   grid-template-areas: ". welcome ." ". . ." ". intro ." ". . ." " artshop artshop artshop"; }
   @media screen and (max-width: 1024px) {
     .main-page {
-      grid-template-columns: 1fr 8fr 1fr;
-      grid-template-rows: auto  100px  auto  100px  auto;
-      grid-template-areas: ". welcome ." ". . ." ". intro ." ". . ." " artshop artshop artshop"; } }
+      grid-template-rows: auto  100px  auto  100px  auto; } }
+  @media screen and (max-width: 768px) {
+    .main-page {
+      grid-template-columns: 10px 1fr 10px;
+      grid-template-rows: auto  50px  auto  100px  auto; } }
 
 .welcome {
   grid-area: welcome;
@@ -318,7 +320,8 @@ h2 {
   grid-area: link;
   text-align: center;
   font-size: 24px;
-  line-height: 25px; }
+  line-height: 25px;
+  text-transform: uppercase; }
 
 .carousel-cell {
   width: 20%; }
@@ -328,6 +331,9 @@ h2 {
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .carousel-cell {
       width: 40%; } }
+  @media screen and (max-width: 768px) {
+    .carousel-cell {
+      width: 60%; } }
 
 .footer {
   grid-area: footer;
@@ -335,6 +341,10 @@ h2 {
   grid-template-columns: 1fr 3fr  50px  2fr  50px  3fr 1fr;
   grid-template-rows: 100px  auto  50px  auto;
   grid-template-areas: "tilt tilt tilt tilt tilt tilt tilt" ". nav nav nav nav nav ." ". . . . . . ." ". opening . some . address ."; }
+  @media screen and (max-width: 768px) {
+    .footer {
+      grid-template-columns: 10px 2fr 10px 2fr 10px;
+      grid-template-areas: "tilt tilt tilt tilt tilt" ". nav nav nav ." ". . . . ." ". opening . address ." " . some some some ."; } }
 
 .footer__nav-section {
   grid-area: nav;
@@ -351,6 +361,22 @@ h2 {
 
 .footer__some {
   grid-area: some; }
+  .footer__some .fa {
+    color: #000000;
+    background-color: whitesmoke;
+    border-radius: 100px; }
+    .footer__some .fa:hover {
+      color: #84cfa1;
+      background-color: #000000; }
+  .footer__some .footer__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer__some .footer__heading {
+    padding: 0 0 40px 0; }
+    @media screen and (max-width: 768px) {
+      .footer__some .footer__heading {
+        display: none; } }
 
 .footer__address {
   grid-area: address; }
@@ -370,7 +396,8 @@ h2 {
 .footer__item {
   font-size: 18px;
   line-height: 20px;
-  line-height: 40px; }
+  line-height: 35px;
+  padding: 0 10px 0 10px; }
 
 .about-page {
   grid-area: main;
