@@ -325,6 +325,9 @@ h2 {
   @media screen and (max-width: 1024px) {
     .carousel-cell {
       width: 30%; } }
+  @media screen and (min-width: 768px) {
+    .carousel-cell {
+      width: 40%; } }
 
 .footer {
   grid-area: footer;
@@ -411,6 +414,9 @@ h2 {
   grid-area: staff;
   background-color: #000000;
   padding: 0 0 100px 0; }
+  @media screen and (min-width: 768px) {
+    .staff {
+      padding: 0 0 30px 0; } }
 
 .staff__heading {
   grid-area: heading;
@@ -426,8 +432,8 @@ h2 {
 .staff__member {
   display: grid;
   grid-template-columns: 1fr 100px 1.1fr 2fr 1.1fr 100px 1fr;
-  grid-template-rows: auto 50px auto;
-  grid-template-areas: ". . . heading . . ." ". . . . . . ." ". . img text text line-right ."; }
+  grid-template-rows: auto;
+  grid-template-areas: ". . img text text line-right ."; }
   .staff__member:nth-of-type(2n) {
     grid-template-areas: ". line-left text text img . ."; }
     .staff__member:nth-of-type(2n) .staff__text {
@@ -436,11 +442,19 @@ h2 {
     .staff__member {
       grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
       grid-template-rows: auto;
-      grid-template-areas: ". . heading . ." ". . . . ." ". img text text line-right"; }
+      grid-template-areas: ". img text text line-right"; }
       .staff__member:nth-of-type(2n) {
         grid-template-areas: "line-left text text img ."; }
         .staff__member:nth-of-type(2n) .staff__text {
           padding: 0 0 0 20%; } }
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .staff__member {
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-areas: " img text text"; }
+      .staff__member:nth-of-type(2n) {
+        grid-template-areas: "text text img"; }
+        .staff__member:nth-of-type(2n) .staff__text {
+          padding: 10px; } }
 
 .staff__img {
   grid-area: img;
@@ -457,6 +471,9 @@ h2 {
   padding: 0 20% 0 0;
   -ms-flex-item-align: center;
   align-self: center; }
+  @media screen and (min-width: 768px) {
+    .staff__text {
+      padding: 10px; } }
 
 .staff__lines--right,
 .staff__lines--left {
