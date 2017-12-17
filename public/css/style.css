@@ -127,8 +127,8 @@ sub {
 
 .nav {
   height: 60px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; }
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000; }
 
 .nav__list {
   display: -webkit-box;
@@ -150,8 +150,8 @@ sub {
     display: -ms-flexbox;
     display: flex;
     height: 60px;
-    background-color: black;
-    color: pink; }
+    background-color: #000000;
+    color: #c98ed1; }
 
 .nav__link {
   padding: 15px;
@@ -160,8 +160,8 @@ sub {
   font-size: 24px;
   line-height: 25px; }
   .nav__link:hover {
-    background-color: black;
-    color: pink; }
+    background-color: #000000;
+    color: #c98ed1; }
 
 .main-page {
   grid-area: main;
@@ -244,8 +244,8 @@ sub {
 
 .artshop {
   grid-area: artshop;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: [space] 100px [space] auto [space] 100px [space] auto [space] 100px [space] auto [space] 100px [space];
@@ -328,4 +328,15 @@ sub {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
-  grid-template-rows: auto [space] 200px [space] auto [space] 200px [space] auto; }
+  grid-template-rows: auto [space] 200px [space] auto;
+  grid-template-areas: ". about ." ". . ." ". staff ."; }
+
+.about-page__about {
+  grid-area: about;
+  height: 400px;
+  width: 100%; }
+
+.about-page__staff {
+  grid-area: staff;
+  height: 400px;
+  width: 100%; }
