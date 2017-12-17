@@ -14,12 +14,12 @@
   </head>
   <body class="grid">
     <!-- Header section that contains the logo and nav -->
-    <header class="header">
+    <header class="header" role="banner">
       <!-- Easy access back to the top of the page. Also it will look great in the eyes of ... -->
       <h1 class="visually-hidden">Welcome to Charlotte Fogh gallery. <a href="#top">Skip navigation?</a>.</h1>
       <a href="#" class="header__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png" alt="Charlotte Fogh gallery"></a>
       <!-- adding the separate class to all stand-alone blocks -->
-      <nav class="header__nav nav">
+      <nav class="header__nav nav" role="navigation">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="index.html">Home</a>
@@ -41,9 +41,8 @@
     </header>
 
     <!-- This is where the main content of the page lies. Everything should be devided in sections according to meaning -->
-    <main class="about-page">
+    <main class="about-page" role="main">
       <div id="top"></div>
-      <div class="tilt"></div>
       <section class="about-page__about about">
         <h2 class="about__heading">About us</h2>
         <div class="about__video-container">
@@ -59,76 +58,98 @@
       </section>
 
       <section class="about-page__staff staff">
+        <div class="tilt"></div>
         <h2 class="staff__heading">Staff</h2>
         <ul class="staff__members">
           <li class="staff__member">
-
+            <img class="staff__img" src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Charlotte-Fogh-460x460.jpeg" alt="Charlotte Fogh">
+            <p class="staff__text">
+            Charlotte Fogh Gallery – Danish and International contemporary art Member of the Danish Gallery Society
+            / Federation of European Galleries Association.Charlotte Fogh Gallery focuses on both upcoming and
+            established artists, working with a range of media and expressions. The artist have all achieved wider
+            appreciation from exhibitions at galleries, museums and international art fairs.The gallery is located
+            in a urban backyard in the center of Aarhus and in an expanding district of contemporary art and design.
+            </p>
+            <div class="staff__lines--right"></div>
           </li>
           <li class="staff__member">
-
+            <img class="staff__img" src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/S%C3%B8ren-460x460.jpg" alt="Charlotte Fogh">
+            <p class="staff__text">
+            Charlotte Fogh Gallery – Danish and International contemporary art Member of the Danish Gallery Society
+            / Federation of European Galleries Association.Charlotte Fogh Gallery focuses on both upcoming and
+            established artists, working with a range of media and expressions. The artist have all achieved wider
+            appreciation from exhibitions at galleries, museums and international art fairs.The gallery is located
+            in a urban backyard in the center of Aarhus and in an expanding district of contemporary art and design.
+            </p>
+            <div class="staff__lines--left"></div>
           </li>
           <li class="staff__member">
-
+            <img class="staff__img" src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Henning-460x460.jpg" alt="Charlotte Fogh">
+            <p class="staff__text">
+            Charlotte Fogh Gallery – Danish and International contemporary art Member of the Danish Gallery Society
+            / Federation of European Galleries Association.Charlotte Fogh Gallery focuses on both upcoming and
+            established artists, working with a range of media and expressions. The artist have all achieved wider
+            appreciation from exhibitions at galleries, museums and international art fairs.The gallery is located
+            in a urban backyard in the center of Aarhus and in an expanding district of contemporary art and design.
+            </p>
           </li>
         </ul>
       </section>
     </main>
 
-  <footer class="footer">
-    <div class="tilt"></div>
-    <section class="footer__nav-section">
-      <!-- Easy access back to the top of the page. Also it will look great in the eyes of ... -->
-      <h1 class="visually-hidden">Thank you for visiting Charlotte Fogh gallery. <a href="#top">Go to top</a>.</h1>
-      <a href="#" class="footer__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png" alt="Charlotte Fogh gallery"></a>
-      <nav class="footer__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="index.html">Home</a>
-          </li>
-          <li class="nav__item--active">
-            <a class="nav__link" href="about.html">About us</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Artshop</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Discover</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Contact</a>
-          </li>
+    <footer class="footer" role="contentinfo">
+      <div class="tilt"></div>
+      <section class="footer__nav-section">
+        <!-- Easy access back to the top of the page. Also it will look great in the eyes of ... -->
+        <h1 class="visually-hidden">Thank you for visiting Charlotte Fogh gallery. <a href="#top">Go to top</a>.</h1>
+        <a href="#" class="footer__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png" alt="Charlotte Fogh gallery"></a>
+        <nav class="footer__nav nav" role="navigation">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Home</a>
+            </li>
+            <li class="nav__item--active">
+              <a class="nav__link" href="about.html">About us</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Artshop</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Discover</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="footer__opening">
+        <h3 class="footer__heading">Opening hours</h3>
+        <ul class="footer__list">
+          <li class="footer__item">Wednesday 12-19</li>
+          <li class="footer__item">Thursday – Friday 12-17</li>
+          <li class="footer__item">Saturday 12-16</li>
+          <li class="footer__item">Sunday – Tuesday closed or by appointment.</li>
         </ul>
-      </nav>
-    </section>
-    <section class="footer__opening">
-      <h3 class="footer__heading">Opening hours</h3>
-      <ul class="footer__list">
-        <li class="footer__item">Wednesday 12-19</li>
-        <li class="footer__item">Thursday – Friday 12-17</li>
-        <li class="footer__item">Saturday 12-16</li>
-        <li class="footer__item">Sunday – Tuesday closed or by appointment.</li>
-      </ul>
-    </section>
-    <section class="footer__some">
-      <h3 class="footer__heading">Follow us</h3>
-      <ul class="footer__list">
-        <li class="footer__item">twitter</li>
-        <li class="footer__item">facebook</li>
-        <li class="footer__item">instagram</li>
-      </ul>
-    </section>
-    <section class="footer__address">
-      <h3 class="footer__heading">Address</h3>
-      <ul class="footer__list">
-        <li class="footer__item">Mejlgade 44A</li>
-        <li class="footer__item">8000 Aarhus C</li>
-        <li class="footer__item">Denmark</li>
-        <li class="footer__item"><a href="tel:+4525697105">Phone: +45 25697105</a></li>
-        <li class="footer__item"><a href="mailto:info@charlottefogh.dk?Subject=Hello%20again%20lets%20talk%20art">Email: info@charlottefogh.dk</a></li>
-      </ul>
-    </section>
-  </footer>
-
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      </section>
+      <section class="footer__some">
+        <h3 class="footer__heading">Follow us</h3>
+        <ul class="footer__list">
+          <li class="footer__item">twitter</li>
+          <li class="footer__item">facebook</li>
+          <li class="footer__item">instagram</li>
+        </ul>
+      </section>
+      <section class="footer__address">
+        <h3 class="footer__heading">Address</h3>
+        <ul class="footer__list">
+          <li class="footer__item">Mejlgade 44A</li>
+          <li class="footer__item">8000 Aarhus C</li>
+          <li class="footer__item">Denmark</li>
+          <li class="footer__item"><a href="tel:+4525697105">Phone: +45 25697105</a></li>
+          <li class="footer__item"><a href="mailto:info@charlottefogh.dk?Subject=Hello%20again%20lets%20talk%20art">Email: info@charlottefogh.dk</a></li>
+        </ul>
+      </section>
+    </footer>
   </body>
 </html>

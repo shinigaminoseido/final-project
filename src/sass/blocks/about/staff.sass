@@ -1,3 +1,53 @@
-.about-page__staff
+.staff
   grid-area: staff
   background-color: $black
+  padding: 0 0 100px 0
+
+.staff__heading
+
+.staff__members
+
+.staff__member
+  display: grid
+  grid-template-columns: 1fr 100px 1.1fr 2fr 1.1fr 100px 1fr
+  grid-template-rows: auto
+  grid-template-areas: ". . img text text line-right ."
+  &:nth-of-type(2n)
+    grid-template-areas: ". line-left text text img . ."
+    .staff__text
+      padding: 0 0 0 20%
+
+.staff__img
+  grid-area: img
+  height: 300px
+  padding: 10px
+  background-color: $black
+
+  z-index: 1
+.staff__text
+  grid-area: text
+  color: $white-dark
+  +font-smallest
+  padding: 0 20% 0 0
+  align-self: center
+
+.staff__lines--right,
+.staff__lines--left
+  position: relative
+  width: 200px
+  height: 200px
+  border-top: 5px solid $green
+  border-bottom: 5px solid $green
+  align-self: flex-end
+
+
+.staff__lines--left
+  grid-area: line-left
+  border-left: 5px solid $green
+  bottom: -75px
+  left: 0px
+.staff__lines--right
+  grid-area: line-right
+  border-right: 5px solid $green
+  bottom: -75px
+  left: -150px

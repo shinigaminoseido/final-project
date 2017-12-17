@@ -17,6 +17,7 @@ a
 img,
   max-width: 100%
   height: auto
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5)
 
 sup,
 sub
@@ -34,11 +35,10 @@ sub
   clip: rect(0 0 0 0)
   overflow: hidden
 // creating the overal grid of the page
-// [space] is being used for TRUE WHITESPACE!
 .grid
   display: grid
   grid-template-columns: 1fr 8fr 1fr
-  grid-template-rows: auto [space] 50px [space] auto
+  grid-template-rows: auto  50px  auto
   grid-template-areas: ". header ." ". . ." "main main main" ". . ." "footer footer footer"
 //instead of making 2 tilts we will place 1 on top of artshop and 1 on top of footer
 //that way we can reuse this with no adjustment
@@ -49,7 +49,7 @@ sub
   top: -50px
   height: 100px
   width: 100%
-  transform: skewy(-2deg)
+  transform: skewy(-3deg)
   background: $black
 
 .intro__video-container,
@@ -57,9 +57,9 @@ sub
   grid-area: vid
   position: relative
   padding-bottom: 56.25%
-  padding-top: 35px
   height: 0
   overflow: hidden
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5)
 
 .intro__video,
 .about__video
