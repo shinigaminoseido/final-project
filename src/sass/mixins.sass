@@ -1,13 +1,13 @@
-=desktop-large
-  @media screen and ($desktop-large)
-    @content
-
 =desktop
   @media screen and ($desktop)
     @content
 
 =tablet
-  @media screen and ($tablet)
+  @media screen and ($tablet-min) and ($tablet-max)
+    @content
+
+=mobile
+  @media screen and ($mobile)
     @content
 
 =clearfix
