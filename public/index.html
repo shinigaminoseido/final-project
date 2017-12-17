@@ -20,10 +20,10 @@
       <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item--active">
-            <a class="nav__link" href="#">Home</a>
+            <a class="nav__link" href="index.html">Home</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">About us</a>
+            <a class="nav__link" href="about.html">About us</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">Artshop</a>
@@ -39,11 +39,13 @@
     </header>
 
     <!-- This is where the main content of the page lies. Everything should be devided in sections according to meaning -->
-    <main class="main">
+    <main class="main-page">
 
-      <section class="welcome">
+      <section class="main-page__welcome welcome">
         <div class="welcome__description">
           <h2 class="welcome__heading">PARALLEL LINES</h2>
+          <h3 class="welcome__artists">Martin Bigum, Lars Nørgård, Mie Olise Kjærgaard and Dominic Beattie</h3>
+          <h3 class="welcome__date">01/12 2017 - 06/01 2018</h3>
           <p class="welcome__text">
             Charlotte Fogh Gallery has the great pleasure to present
             this year’s winter exhibition, where four established artists will
@@ -56,21 +58,23 @@
         <img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/World-Record.jpg" alt="" class="welcome__image">
       </section>
 
-      <section class="intro">
-        <h2 class="intro__heading">Fogh Gallery</h2>
+      <section class="main-page__intro intro">
+        <h2 class="intro__heading">The gallery that keeps you alive</h2>
+        <div class="intro__video-container">
+          <iframe class="intro__video" width="100%" height="100%" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
         <p class="intro__text">
           Charlotte Fogh Gallery – Danish and International contemporary art Member of the Danish Gallery Society
           / Federation of European Galleries Association.Charlotte Fogh Gallery focuses on both upcoming and
           established artists, working with a range of media and expressions. The artist have all achieved wider
           appreciation from exhibitions at galleries, museums and international art fairs.The gallery is located
           in a urban backyard in the center of Aarhus and in an expanding district of contemporary art and design.
+          <br>
         </p>
-        <div class="intro__video-container">
-          <iframe class="intro__video" width="100%" height="100%" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
+
       </section>
 
-      <section class="artshop">
+      <section class="main-page__artshop artshop">
         <div class="tilt"></div>
         <h2 class="artshop__heading">Artshop</h2>
         <section class="artshop__slider slider">
@@ -130,11 +134,11 @@
         <a href="#" class="footer__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png"></a>
         <nav class="footer__nav nav">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">Home</a>
+            <li class="nav__item--active">
+              <a class="nav__link" href="index.html">Home</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">About us</a>
+              <a class="nav__link" href="about.html">About us</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Artshop</a>
@@ -171,8 +175,8 @@
           <li class="footer__item">Mejlgade 44A</li>
           <li class="footer__item">8000 Aarhus C</li>
           <li class="footer__item">Denmark</li>
-          <li class="footer__item">Phone: +45 25697105</li>
-          <li class="footer__item">Email: info@charlottefogh.dk</li>
+          <li class="footer__item"><a href="tel:+4525697105">Phone: +45 25697105</a></li>
+          <li class="footer__item"><a href="mailto:info@charlottefogh.dk?Subject=Hello%20again%20lets%20talk%20art">Email: info@charlottefogh.dk</a></li>
         </ul>
       </section>
     </footer>

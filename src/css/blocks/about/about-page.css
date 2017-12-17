@@ -1,0 +1,5 @@
+.about-page {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: auto [space] 200px [space] auto [space] 200px [space] auto; }

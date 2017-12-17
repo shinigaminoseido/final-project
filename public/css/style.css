@@ -100,7 +100,7 @@ sub {
 .grid {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
-  grid-template-rows: 160px [space] 50px [space] auto auto;
+  grid-template-rows: auto [space] 50px [space] auto;
   grid-template-areas: ". header ." ". . ." "main main main" ". . ." "footer footer footer"; }
 
 .tilt {
@@ -119,7 +119,8 @@ sub {
   grid-area: header;
   display: grid;
   grid-template-columns: auto;
-  grid-row: auto; }
+  grid-row: auto;
+  margin: 20px 0 0 0; }
 
 .header__logo {
   margin: 0 auto; }
@@ -162,7 +163,7 @@ sub {
     background-color: black;
     color: pink; }
 
-.main {
+.main-page {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
@@ -183,7 +184,19 @@ sub {
 
 .welcome__heading {
   font-size: 58px;
-  line-height: 60px; }
+  line-height: 60px;
+  margin: 10px 0; }
+
+.welcome__artists {
+  font-size: 24px;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin: 10px 0; }
+
+.welcome__date {
+  font-weight: 700;
+  margin: 10px 0;
+  text-decoration: underline; }
 
 .welcome__text {
   font-size: 24px;
@@ -199,7 +212,7 @@ sub {
   display: grid;
   grid-template-columns: 1fr 50px 1fr;
   grid-template-rows: auto [space] 100px [space] 500px;
-  grid-template-areas: "heading heading heading" ". . ." "description . vid"; }
+  grid-template-areas: "heading heading heading" ". . ." "vid . description"; }
 
 .intro__heading {
   grid-area: heading;
@@ -282,7 +295,8 @@ sub {
   grid-template-rows: auto; }
 
 .footer__logo {
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 0 20px 0; }
 
 .footer__opening {
   grid-area: opening; }
@@ -292,6 +306,12 @@ sub {
 
 .footer__address {
   grid-area: address; }
+
+.footer__opening,
+.footer__some,
+.footer__address {
+  margin-left: auto;
+  margin-right: auto; }
 
 .footer__heading {
   text-transform: uppercase;
@@ -303,3 +323,9 @@ sub {
   font-size: 18px;
   line-height: 20px;
   line-height: 40px; }
+
+.about-page {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: auto [space] 200px [space] auto [space] 200px [space] auto; }
