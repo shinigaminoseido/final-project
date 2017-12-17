@@ -2,5 +2,18 @@
   grid-area: about
   display: grid
   grid-template-columns: 1fr
-  grid-template-rows: auto [space] 50px [space] auto [space] 50px [space] auto
-  grid-template-areas: "heading" "." "vid" "." "text"
+  grid-template-rows: auto
+  grid-template-areas: "heading" "vid" "text"
+
+.about__heading
+  grid-area: heading
+  +font-big
+  text-align: center
+.about__video
+  //easier way of making the video smaller and saving a couple of [space] xx [space] in the grid-template-rows
+  padding: 5%
+  //in scaffolding because of repeated properties
+.about__text
+  grid-area: text
+  align-self: center
+  +font-small

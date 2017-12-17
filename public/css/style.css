@@ -337,8 +337,24 @@ sub {
   grid-area: about;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto [space] 50px [space] auto [space] 50px [space] auto;
-  grid-template-areas: "heading" "." "vid" "." "text"; }
+  grid-template-rows: auto;
+  grid-template-areas: "heading" "vid" "text"; }
+
+.about__heading {
+  grid-area: heading;
+  font-size: 58px;
+  line-height: 60px;
+  text-align: center; }
+
+.about__video {
+  padding: 5%; }
+
+.about__text {
+  grid-area: text;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 24px;
+  line-height: 25px; }
 
 .about-page__staff {
   grid-area: staff;

@@ -6,7 +6,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="https://github.com/shinigaminoseido">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>CharlotteFogh</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,7 +15,9 @@
   <body class="grid">
     <!-- Header section that contains the logo and nav -->
     <header class="header">
-      <a href="#" class="header__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png"></a>
+      <!-- Easy access back to the top of the page. Also it will look great in the eyes of ... -->
+      <h1 class="visually-hidden">Welcome to Charlotte Fogh gallery. <a href="#top">Skip navigation?</a>.</h1>
+      <a href="#" class="header__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png" alt="Charlotte Fogh gallery"></a>
       <!-- adding the separate class to all stand-alone blocks -->
       <nav class="header__nav nav">
         <ul class="nav__list">
@@ -40,26 +42,44 @@
 
     <!-- This is where the main content of the page lies. Everything should be devided in sections according to meaning -->
     <main class="about-page">
+      <div id="top"></div>
       <div class="tilt"></div>
       <section class="about-page__about about">
         <h2 class="about__heading">About us</h2>
         <div class="about__video-container">
-          <iframe class="about__video" src="https://www.youtube.com/embed/NU5LHohWOs8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <iframe class="about__video" src="https://www.youtube.com/embed/NU5LHohWOs8"  allowfullscreen></iframe>
         </div>
         <p class="about__text">
-
+          Charlotte Fogh Gallery – Danish and International contemporary art Member of the Danish Gallery Society
+          / Federation of European Galleries Association.Charlotte Fogh Gallery focuses on both upcoming and
+          established artists, working with a range of media and expressions. The artist have all achieved wider
+          appreciation from exhibitions at galleries, museums and international art fairs.The gallery is located
+          in a urban backyard in the center of Aarhus and in an expanding district of contemporary art and design.
         </p>
       </section>
 
       <section class="about-page__staff staff">
+        <h2 class="staff__heading">Staff</h2>
+        <ul class="staff__members">
+          <li class="staff__member">
 
+          </li>
+          <li class="staff__member">
+
+          </li>
+          <li class="staff__member">
+
+          </li>
+        </ul>
       </section>
     </main>
 
   <footer class="footer">
     <div class="tilt"></div>
     <section class="footer__nav-section">
-      <a href="#" class="footer__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png"></a>
+      <!-- Easy access back to the top of the page. Also it will look great in the eyes of ... -->
+      <h1 class="visually-hidden">Thank you for visiting Charlotte Fogh gallery. <a href="#top">Go to top</a>.</h1>
+      <a href="#" class="footer__logo"><img src="http://www.charlottefogh.dk/wp-content/uploads/2015/09/Logo.png" alt="Charlotte Fogh gallery"></a>
       <nav class="footer__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
