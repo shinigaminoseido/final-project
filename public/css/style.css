@@ -79,7 +79,7 @@ a {
   text-decoration: none; }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); }
@@ -363,11 +363,9 @@ h2 {
   grid-area: some; }
   .footer__some .fa {
     color: #000000;
-    background-color: whitesmoke;
-    border-radius: 100px; }
+    background-color: whitesmoke; }
     .footer__some .fa:hover {
-      color: #84cfa1;
-      background-color: #000000; }
+      color: #84cfa1; }
   .footer__some .footer__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -527,3 +525,75 @@ h2 {
   border-right: 5px solid #84cfa1;
   bottom: -75px;
   left: -150px; }
+
+.artshop-page {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: auto  100px  auto 100px auto 0 auto;
+  grid-template-areas: ". prints ." ". . ." ". multi ." ". . ." "gift gift gift" ". . ." "books books books"; }
+
+.artshop-page__prints,
+.artshop-page__multipes,
+.artshop-page__giftcards,
+.artshop-page__books {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 50px auto 50px auto 50px auto;
+  grid-template-areas: "tilt tilt tilt tilt tilt" "heading heading heading heading heading" ". . . . ." "img-1 . img-2 . img-3"; }
+
+.prints__heading,
+.multipes__heading,
+.giftcards__heading,
+.books__heading {
+  grid-area: heading;
+  text-align: center;
+  font-size: 58px;
+  line-height: 60px; }
+  @media screen and (max-width: 1024px) {
+    .prints__heading,
+    .multipes__heading,
+    .giftcards__heading,
+    .books__heading {
+      font-size: 48px;
+      line-height: 50px; } }
+
+.prints__image,
+.multipes__image,
+.giftcards__image,
+.books__image {
+  grid-area: img-1; }
+  .prints__image:nth-child(2),
+  .multipes__image:nth-child(2),
+  .giftcards__image:nth-child(2),
+  .books__image:nth-child(2) {
+    grid-area: img-2; }
+  .prints__image:nth-child(3),
+  .multipes__image:nth-child(3),
+  .giftcards__image:nth-child(3),
+  .books__image:nth-child(3) {
+    grid-area: img-3; }
+
+.artshop-page__prints {
+  grid-area: prints; }
+
+.artshop-page__multipes {
+  grid-area: multi; }
+
+.artshop-page__giftcards {
+  grid-area: gift;
+  background-color: #000000;
+  color: #84cfa1;
+  padding: 0 0 100px 0; }
+  .artshop-page__giftcards img {
+    padding: 0 60px; }
+
+.artshop-page__books {
+  grid-area: books; }
+  .artshop-page__books img {
+    padding: 0 60px;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.books__heading {
+  padding: 100px 0 0 0; }

@@ -1,0 +1,60 @@
+.artshop-page
+  grid-area: main
+  display: grid
+  // adding 1fr to the side because if added in the .grid we wont be able to make a full page tilt
+  // this way we can control which section of the main we make full width(the artshop)
+  grid-template-columns: 1fr 8fr 1fr
+  grid-template-rows: auto  100px  auto 100px auto 0 auto
+  grid-template-areas: ". prints ." ". . ." ". multi ." ". . ." "gift gift gift" ". . ." "books books books"
+
+.artshop-page__prints,
+.artshop-page__multipes,
+.artshop-page__giftcards,
+.artshop-page__books
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: 50px auto 50px auto 50px auto
+  grid-template-areas: "tilt tilt tilt tilt tilt" "heading heading heading heading heading" ". . . . ." "img-1 . img-2 . img-3"
+
+.prints__heading,
+.multipes__heading,
+.giftcards__heading,
+.books__heading
+  grid-area: heading
+  text-align: center
+  +font-big
+  +desktop
+    +font-med
+.prints__image,
+.multipes__image,
+.giftcards__image,
+.books__image
+  grid-area: img-1
+  &:nth-child(2)
+    grid-area: img-2
+  &:nth-child(3)
+    grid-area: img-3
+
+
+.artshop-page__prints
+  grid-area: prints
+
+.artshop-page__multipes
+  grid-area: multi
+
+.artshop-page__giftcards
+  grid-area: gift
+  background-color: $black
+  color: $green
+  padding: 0 0 100px 0
+  img
+    padding: 0 60px
+
+.artshop-page__books
+  grid-area: books
+  img
+    padding: 0 60px
+    box-shadow: none
+
+.books__heading
+  padding: 100px 0 0 0
